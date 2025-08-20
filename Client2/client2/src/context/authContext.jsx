@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+const API_BASE_URL = 'https://erp-be-daje.onrender.com'
 
 const AuthContext = createContext();
 
@@ -31,7 +32,7 @@ export const AuthProvider = ({ children }) => {
           axios.defaults.headers.common['Authorization'] = `Bearer ${storedToken}`;
           
           // Verify token is still valid
-          const response = await axios.get('http://localhost:5000/verify-token');
+          const response = await axios.get(API_BASE_URL+'/verify-token');
           
           if (response.data.valid) {
             setToken(storedToken);
@@ -61,7 +62,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (credentials) => {
     try {
-      const response = await axios.post('http://localhost:5000/login', credentials);
+      const response = await axios.post(API_BASE_URL+'/login', credentials);
       
       // Extract data from backend response
       const { token: newToken, user: userData } = response.data;
