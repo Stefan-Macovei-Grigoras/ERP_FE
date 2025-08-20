@@ -742,6 +742,7 @@
 // services/admin/adminApiService.js
 //const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 const API_BASE_URL = 'https://erp-be-daje.onrender.com' || 'http://localhost:5000';
+
 class AdminApiService {
   // Generic method for making API requests
   async makeRequest(endpoint, options = {}) {
@@ -1253,7 +1254,7 @@ class AdminApiService {
 
    async getProducts() {
     try {
-      const response = await fetch('http://localhost:5000/product', {
+      const response = await fetch(API_BASE_URL, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -1273,7 +1274,7 @@ class AdminApiService {
   // Create new product
   async createProduct(productData) {
     try {
-      const response = await fetch('http://localhost:5000/product', {
+      const response = await fetch(API_BASE_URL+'/product', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1294,7 +1295,7 @@ class AdminApiService {
   // Update product
   async updateProduct(id, productData) {
     try {
-      const response = await fetch(`http://localhost:5000/product/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/product/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -1315,7 +1316,7 @@ class AdminApiService {
   // Delete product
   async deleteProduct(id) {
     try {
-      const response = await fetch(`http://localhost:5000/product/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/product/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
