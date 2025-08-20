@@ -38,10 +38,15 @@ import {
 import adminApiService from '../../services/admin/adminApiService';
 
 // Available user roles in the system
+// const userRoles = [
+//   'Factory Worker',
+//   'Packaging Worker', 
+//   'Admin'
+// ];
 const userRoles = [
-  'Factory Worker',
-  'Packaging Worker', 
-  'Admin'
+  { label: 'Admin', value: 'admin' },
+  { label: 'Factory Worker', value: 'factory' },
+  { label: 'Packaging Worker', value: 'packaging' }
 ];
 
 /**
@@ -226,9 +231,9 @@ function UserManagement() {
     switch (role) {
       case 'admin':
         return 'error';
-      case 'factory_worker':
+      case 'factory':
         return 'primary';
-      case 'packaging_worker':
+      case 'packaging':
         return 'secondary';
       default:
         return 'default';
@@ -373,8 +378,8 @@ function UserManagement() {
               placeholder="Select user role"
             >
               {userRoles.map((role) => (
-                <MenuItem key={role} value={role}>
-                  {role}
+                <MenuItem key={role.value} value={role.value}>
+                  {role.label}
                 </MenuItem>
               ))}
             </TextField>

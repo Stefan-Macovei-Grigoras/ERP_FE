@@ -763,6 +763,10 @@ class AdminApiService {
         const errorData = await response.json().catch(() => ({}));
         throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
       }
+
+      if (response.status === 204) {
+        return null;
+      }
       
       return await response.json();
     } catch (error) {
