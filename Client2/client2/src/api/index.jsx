@@ -1,5 +1,5 @@
 // API service for handling all backend communication
-const API_BASE_URL = 'http://localhost:5000' || 'https://erp-be-daje.onrender.com/api';
+const API_BASE_URL = 'https://erp-be-daje.onrender.com' || 'http://localhost:5000';
 
 class ApiService {
   // Generic method for making API requests

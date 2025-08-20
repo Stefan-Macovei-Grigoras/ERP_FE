@@ -218,7 +218,7 @@
 
 // services/packaging/packagingApiService.jsx
 
-const API_BASE_URL ='http://localhost:5000' || 'https://erp-be-daje.onrender.com';
+const API_BASE_URL = 'https://erp-be-daje.onrender.com' || 'http://localhost:5000';
 
 /**
  * Packaging API Service
