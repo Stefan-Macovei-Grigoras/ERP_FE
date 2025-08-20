@@ -1,3 +1,4 @@
+
 // import React, { useState, useEffect, useRef } from 'react';
 // import {
 //   LineChart,
@@ -175,30 +176,30 @@
 //         </div>
 //       )}
 
-//       {/* Current Temperature Display */}
+//       {/* Current Temperature Display - Made Smaller */}
 //       <div style={{ padding: '10px' }}>
 //         <div style={{ 
 //           textAlign: 'center',
-//           padding: '20px',
+//           padding: '12px',
 //           backgroundColor: '#f8f9fa',
-//           borderRadius: '12px',
-//           border: '2px solid #ddd',
-//           marginBottom: '20px'
+//           borderRadius: '8px',
+//           border: '1px solid #ddd',
+//           marginBottom: '16px'
 //         }}>
 //           <div style={{ 
-//             fontSize: '0.875rem', 
+//             fontSize: '0.75rem', 
 //             color: '#666', 
-//             marginBottom: '8px',
+//             marginBottom: '6px',
 //             fontWeight: '500'
 //           }}>
-//             Cauldron Temperature
+//             Current Temperature
 //           </div>
 //           <div style={{ 
-//             fontSize: '3rem', 
+//             fontSize: '2rem', 
 //             fontWeight: 'bold', 
 //             color: '#333',
 //             lineHeight: '1',
-//             marginBottom: '8px'
+//             marginBottom: '4px'
 //           }}>
 //             {sensorData.temperature !== null ? `${sensorData.temperature.toFixed(1)}°C` : '--°C'}
 //           </div>
@@ -208,12 +209,12 @@
 //         {sensorData.timestamp && (
 //           <div style={{ 
 //             textAlign: 'center', 
-//             fontSize: '0.8rem', 
+//             fontSize: '0.75rem', 
 //             color: '#666',
-//             marginBottom: '20px',
+//             marginBottom: '16px',
 //             backgroundColor: '#f0f0f0',
-//             padding: '8px',
-//             borderRadius: '6px'
+//             padding: '6px',
+//             borderRadius: '4px'
 //           }}>
 //             Last updated: {sensorData.timestamp.toLocaleTimeString()}
 //           </div>
@@ -334,7 +335,7 @@ function SensorDataDisplay() {
   useEffect(() => {
     const connectWebSocket = () => {
       try {
-        const ws = new WebSocket('ws://localhost:5000/ws');
+        const ws = new WebSocket('wss://erp-be-daje.onrender.com/ws');
         wsRef.current = ws;
 
         ws.onopen = () => {
