@@ -514,7 +514,7 @@ class AdminApiService {
 
    async getProducts() {
     try {
-      const response = await fetch(API_BASE_URL, {
+      const response = await fetch(`${API_BASE_URL}/product`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
