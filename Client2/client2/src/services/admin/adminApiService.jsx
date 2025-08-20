@@ -741,7 +741,7 @@
 
 // services/admin/adminApiService.js
 //const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
-const API_BASE_URL ='http://localhost:5000';
+const API_BASE_URL = 'http://localhost:5000' || 'https://erp-be-daje.onrender.com';
 
 class AdminApiService {
   // Generic method for making API requests
