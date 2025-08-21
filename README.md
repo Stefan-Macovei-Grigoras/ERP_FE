@@ -31,28 +31,6 @@
 
 ERP_FE is a front-end application built as part of an Enterprise Resource Planning (ERP) system. It is designed using React with functional components and hooks for state management. The application provides a modern interface for managing key operations in manufacturing and production environments including batch production, packaging, inventory control, and user operations. By seamlessly connecting to a backend ERP API, ERP_FE ensures that production workflows are efficient and data is synchronized between front-end interfaces and the backend services.
 
-## Installation
-
-1. **Clone the repository:**
-
-   git clone https://github.com/Stefan-Macovei-Grigoras/ERP_FE.git  
-   cd ERP_FE
-
-2. **Install dependencies:**
-
-   npm install
-
-3. **Configure environment variables:**  
-   Create a `.env` file in the project root. For example:
-
-   REACT_APP_API_URL=https://erp-be-daje.onrender.com
-
-4. **Run the development server:**
-
-   npm start
-
-This will start the application locally, by default on port 3000. Open your browser to http://localhost:3000.
-
 ## Usage
 
 - **Fetching Data:**  
